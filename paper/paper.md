@@ -291,29 +291,29 @@ Novelty
 | Uniqueness | Inverse of the number of sources that present the same information. Maybe this is non-linear (the difference between an information being shared between 2 or 3 resources is more than between 10 or 11) | Yes/No? | ?| Can we really assess this? It would imply that all information is reconciled. |
 
 ## Quality
-| Theoretical measures | Practical measures | Measure type | Notes |
-|----------------------|--------------------|--------------|-------|
-| Truth | Almost impossible! | Sampling/error rate | % of information with provenance |
-| Completeness | % of filled fields, respect to a global consensus of required fields | % of filled fields respect to the dataset definition | Numeric, normalised. |
+| | Theoretical measures | Practical measures | Measure type | Notes |
+|----------------------|----------------------|--------------------|--------------|-------|
+| Truth | Almost impossible! | - Sampling/error rate - % of information with provenance -Amount of citations/derivations | % of information with provenance ||
+| Completeness | % of filled fields, respect to a global consensus of required fields | % of filled fields respect to the dataset definition | Numeric, normalised. ||
 
 
 ## Usability
-| Theoretical measures | Practical measures | Measure type | Notes |
-|----------------------|--------------------|--------------|-------|
-| Standardization | ? | Percentage of values from ontologies shared by one or more of other independent resources | Could be a normalised numeric, although perfection would not be 1 |
-| Interrelation | ? | Percentage of identifiers linked to one of more independent resources | Could be a normalised numeric, although perfection would not be 1 |
+| |Theoretical measures | Practical measures | Measure type | Notes |
+|----------------------|----------------------|--------------------|--------------|-------|
+| Standardization | ? | Percentage of values from ontologies shared by one or more of other independent resources | Could be a normalised numeric, although perfection would not be 1 (you cannot be standard for information for which standards have yet to be defined) |
+| Interrelation | ? | Percentage of identifiers linked to one of more independent resources | Could be a normalised numeric, although perfection would not be 1(not everything can be linked) |
 
 ## Extensiveness
-| Theoretical measures | Practical measures | Measure type | Notes |
-|----------------------|--------------------|--------------|-------|
-| Amount | This could be an absolute measure, or relative | Number of statements | Percentage of entities covered |
-| Detail | ? | Average number of statement per entity | Absolute? |
+| |Theoretical measures | Practical measures | Measure type | Notes |
+||--------------------------------------------|--------------------|--------------|-------|
+| Amount | This could be an absolute measure, or relative (e.g.: respect to a number of entities in the world) | - Number of statements - Percentage of entities covered - Total amount of entities covered | Absolute, or normalised. | Nonlinear correction needed: arguably not all facts have the same weight and there is tradeoff between quantity and complexity of obtaining information |
+| Detail | ? | Average number of statement per entity | Absolute? |Nonlinear correction needed|
 
 ## Maintenance
-| Theoretical measures | Practical measures | Measure type | Notes |
-|----------------------|--------------------|--------------|-------|
-| Curation model | We can define some curation categories: curation once, continuous curation | Presence of evidence codes? | Where this applies |
-| Freshness | Yes/No, maybe with a fuzzy assessment | ? | ? |
+|| Theoretical measures | Practical measures | Measure type | Notes |
+||--------------------------------------------|--------------------|--------------|-------|
+| We can define some curation categories: curation once, continuous curation. Maybe for these the amount of “coverage” in terms of entities. An alternative approach would be to think in terms of MM/data. Maybe each curation-model has its own metrics. |-  Presence of evidence codes? - N. of tickets opened/closed - N. of messages on mailing lists? | ? ||
+| Freshness | Yes/No, maybe with a fuzzy assessment | ? | ? ||
 
 
 
