@@ -228,6 +228,64 @@ And from combining these two tables we can derive a set of contexts:
 - **Explorative-repeated**: No specific question, data is used for exploration (cfr. Fishing expedition).
 
 
+# Dimensions that contribute to the value of data
+
+## Novelty/delta respect to other sources 
+Not an absolute measure, but any additional piece of knowledge will be more valuable as it adds new information to what is already known. Note that in some cases extra data may only be noise.
+### “real-time”-ness
+Whether the information (time dependent) is relative to the “current” time. For instance, data feeds monitoring real-world entities (e.g.: weather, traffic, stock-market) have an intrinsic value the more this information is real-time and not delayed. This can be seen as a delta respect to knowledge that becomes more widely available in time.
+### uniqueness
+Is this the only source for this information? Or are multiple sources available? This can be seen as a delta respect to other agents.
+
+## Quality  
+The value of data is clearly related to its quality, as in:
+### truth  
+Where data is true or accurate. Traceability may be part of this. “Truth” is in principle hard to establish, as what we can measure is really consistency (e.g.: respect to experimental evidence).
+### “completeness”
+Whether data lacks missing values. Is there a reference?
+
+Note: several aspects of quality could probably be quantified numerically (e.g.: by sampling a dataset).
+
+## Usability
+Data will be more valuable the more “usable” it is. Usability can have different sub-aspects.
+### Standardization
+The more the data is represented following standards, the more it is easier (or at all possible) to integrate.
+### Interrelation
+The more data has link to other data, the more it is easier (or at all possible) to integrate and contextualise it.
+
+## Amount
+The value of a data asset may be in some way proportional to how much information is there:
+## extensiveness
+In terms of coverage of a domain. If we are considering for instance a dataset about publications relevant for a specific domain, extensiveness could be captured by the amount of publications in the dataset, respect to the estimate of the total amount of publications available on the subject. 
+It should be feasible to have a normalised value (e.g.: in [0,1]) for this measure.
+## detail
+In terms of depth of detail. We can capture, for a dataset, the average of how many distinct structured data items this presents. But it’s a discretionary value as the granularity of a data element is undefined. Plus it cannot be easily normalised (as detail itself is a recursive concept).
+
+## information content
+Could we have an “entropy like” measure of the information content of a data asset, perhaps respect to some prediction potential?
+
+## Interpretability
+Do we need to acknowledge DIKW model here?
+Sometimes people think data themselves are a set of inorganic things aligned with a given structure. Information would be something semantic.
+Cf. https://www.ontotext.com/knowledgehub/fundamentals/dikw-pyramid/
+
+## Sustainability
+Whether we know that a dataset is going to be kept up to date or not.
+### Curation model
+Who is in charge of the data cleansing? Is it the provider (source), the consumer or a third party? Is there a model where curation is shared among users in a pre-competitive space? (possibly maximizing value).
+
+### Freshness
+Independently of curation, not all types of data hold value through time in the same way. For instance weather forecasts are continuously updated. An superseded forecast has no value (to the point that it’s not even meaningful to retain it as a reference). On the other hand reference data or historical data maye holds its value forever (e.g.: data about the world population over the years is not affected by time).
+
+
+
+
+
+
+
+
+
+
 
 
 | Header 1 | Header 2 |
