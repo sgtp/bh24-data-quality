@@ -1,16 +1,23 @@
 ---
-title: 'BioHackEU23 report: Template for the very long title'
-title_short: 'BioHackEU23 #26: unknown chemical substances'
+title: 'On the value of data (#BioHackJP version)'
+title_short: 'a collaborative experiment on data evaluation'
 tags:
-  - cheminformatics
-  - PubChem
-  - unknown chemical substances
+  - data strategy
+  - data quality
+  - data economics
 authors:
-  - name: First Author
-    affiliation: 1
-  - name: Last Author
+  - name: Andrea Splendiani
     orcid: 0000-0000-0000-0000
-    affiliation: 2
+    affiliation: IQVIA
+  - name: Erick Antezana
+    orcid: 0000-0000-0000-0000
+    affiliation: United Nations
+  - name: Achille Zappa
+    orcid: 0000-0000-0000-0000
+    affiliation: TBD
+  - name: Yasunori Yamamoto
+    orcid: 0000-0000-0000-0000
+    affiliation: DBCLS
 affiliations:
   - name: First Affiliation
     index: 1
@@ -18,10 +25,10 @@ affiliations:
     index: 2
 date: 8 November 2023
 cito-bibliography: paper.bib
-event: BH23EU
-biohackathon_name: "BioHackathon Europe 2023"
+event: BioHack24JP
+biohackathon_name: "BioHackathon Japan 2024"
 biohackathon_url:   "https://biohackathon-europe.org/"
-biohackathon_location: "Barcelona, Spain, 2023"
+biohackathon_location: "Fukushima, Japan, 2024"
 group: Project 26
 # URL to project git repo --- should contain the actual paper.md:
 git_url: https://github.com/biohackrxiv/publication-template
