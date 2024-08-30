@@ -77,6 +77,164 @@ In devising an approach for data evaluation, we consider the following steps:
 - How these can be combined into metrics
 The intention of this document is not to define finalized and applicable metrics, but to provide an approach to devise some, and to provide a “thought experiment” validation that the approach makes sense.
 
+# The context (purpose) of data use
+Obviously, data is valuable insofar it has a (possibly potential) purpose, e.g.: to generate new insights, or for instance to validate an hypothesis. Therefore in order to assess the value of data we need to characterize how data relates to its usage to address a given purpose. 
+We can, in a first approximation, consider a “question” (e.g.: a research question, or a business question) as the “purpose” of a dataset.
+We can then break down how we characterize such a question, and how we characterize the relation of a dataset to such a question, and life cycle of such question.
+Can we then identify some “typical and relative” contexts?
+
+## Aspects characterizing the business need
+### Breadth
+Whether the use of data is specific to a given question, or just explorative.
+- Specific. One single question to be answered.
+- Thematic. A class of questions on a specific topic to be answered.
+- Explorative. No specific question. Just checking the data to see what is in it.
+### Question life cycle
+Where a question is in its life cycle:
+- Initiating
+- Mature
+- Phase-out
+
+## Aspects characterizing the usage of data to address a business need
+### Competitiveness
+Whether the use of data is providing a competitive advantage, with the implication that there is value in data that others don’t have (yet), or not.
+- **Competitive**: having information that others don’t have (sub-case: having it earlier than others) is of value. Example: latest news.
+- **Non-competitive**: having information that others don’t have makes no difference. 
+- **Synergistic**:  having information that others don’t have is detrimental. Example: can a case be reference data? The less shared, the worse?
+### Recurrence
+The relation between purpose and time.
+Another possible category is the “life-span”. Is the task a once-only task, or a repeated task?
+- **One-off**. The utility of the data is for a specific question, after which data need would need to be re-evaluated
+- **Repeated**. The question this data is called to answer is recurrent. We could further distinguish whether in this case information is time-sensitive or not (e.g.: whether queries are about information in real time or not).
+### Restrictivness
+Whether data usage is in a confidential context and is restricted in the way it can be applied to answer questions, or not (e.g.: some data may be tied to a question due to consent restriction, some data may not be linked to other data due to privacy restrictions)..
+- **Restricted**
+- **Public**
+
+## Relations of a dataset to a purpose
+### Relatedness
+How the dataset relates to a specific investigation. One way to think about this is to have a set of levels by which data assets can be ordered:
+Necessary and sufficient. This data asset is all that is needed to clearly address a purpose (e.g.: needs a list of addresses per postcodes in a country, this could be in a single data asset from the government)
+- **Necessary**. Without this asset a purpose could not be addressed, but the dataset may not be sufficient (e.g.: weather forecast is necessary for airplane traffic planning).
+- **Relevant**. There is some established potential for a dataset to address a purpose, but this is still only a conjecture.
+- **On topic**. There is no clear link between this dataset and a given task, except that the dataset is “on topic”. E.g.: for the objective of computing food calories, the dataset is about regional food recipes.
+**Unrelated**. The dataset is in principle unrelated to the task at hand (e.g.: a food recipe dataset for weather forecast)
+### Generation
+Whether the dataset is generated for a specific task, or if it is “re-used”.
+- **Primary whether** the dataset is generated on purpose for a given topic
+- **Secondary** whether a dataset, generated for another use case, can be repurposed
+- **A-priori** whether a dataset is provided independently from use cases.
+### Role
+- **Generic input**
+- **Training**
+- **Test**
+- **Validation**
+## Data Life cycle
+Where data stands its generation life cycle. Any assessment or qualification of a data in its value needs to be related to the project stage when it has been produced and its generation and role.
+Usually any project as three stages:  
+- **Initiation**
+- **Maturity**
+- **Phase-out / legacy support**
+
+
+## Definition of characteristic contexts
+We have defined several aspects to characterize a data usage context, or question, here reported for readability:
+- The breadth of the question (Specific, Thematic, Explorative)
+- The relation of the dataset to a given question:
+-- The competitive advantage of a dataset (Competitive, non-competitive, Synergistic)
+-- The recurrence of a data use (One-off, repeated))
+-- The restrictions on the use of a dataset (restricted, public)
+-- The relatedness to the question (Necessary and sufficient, necessary, relevant, on topic, unrelated)
+-- The generation of the dataset in relation to a question (primary, secondary, a-priori)
+-- The role of a dataset in answering the question (Generic input, training, test, validation)
+- The life cycle of a question (initiation, maturity, phase out)
+
+Different combinations of the above define different scenarios under which data can be valued differently: the value of data being standardized, for instance, is intuitively more valuable if this is used for exploration in the context of other data, than in a one-off data analysis. 
+We proceed now by identify some archetypical scenarios
+
+There could be different criteria for defining such contexts. We could think in terms of type of information (e.g.: laboratory data vs reports), or in terms of communities (cfr. FAIRmetrics).
+As a first tentative, we consider some combination of the above aspects.
+
+First we could for instance assess how relatedness supports different breadth of queries. E.g.: answering the question: would a dataset that ”necessary and sufficient”, “necessary”, “related” address the need of a query that is “specific”, “broad”, “explorative”?
+An assessment is reported in the following table.
+
+
+| |Specific|Thematic|Explorative|
+| ------ | ----- | ----- | ----- |
+| Necessary and sufficient | Yes | N/A |N/A |
+| Necessary | Yes | N/A | N/A |
+| Relevant | Little | Yes | Yes |
+| On topic |Very little | Little | Yes |
+| Unrelated | No| No| Little |
+
+
+From this can we identify, with some simplification, four contexts here below:
+
+
+**1) specific-necessary**
+
+| |Specific|
+|-----|-----|
+|Necessary and sufficient|Yes|
+|Necessary| Yes|
+
+Well defined task, essential relation of the data to the task. In brief, we call this: specific-necessary
+
+**2) specific-additional**
+
+||Specific|
+|-----|-----|
+|Relevant|Little|
+|On topic|Very little|
+
+
+Well defined task, additional data. In brief, we call this: specific-additional (this context capture scenario where some information may hold some value, for validation, cross-referencing or perhaps in unexpected ways).
+
+### 3) thematic
+
+||Thematic|
+|-----|-----|
+|Relevant|Yes|
+|On topic|Little|
+
+Non defined task, but clear range of questions asked. We can this simply thematic 
+
+### 4) explorative
+
+||Explorative|
+|-----|-----|
+| Relevant|Yes|
+|On topic|Yes|
+|Unrelated|Little|
+
+Non defined questions. Typical purpose is data mining. We call this simply explorative.
+We can now try to  assess in which ways these context relate to the data life-span, or more in general its relation to sustainability:
+
+
+||one-off|repeated|repeated/time critical|
+|-----|-----|-----|-----|
+|specific-necessary|Yes|redundant?|Yes|
+|specific-additional|Yes|redundant?|unlikely|
+|thematic|No|Yes|In some cases|
+|explorative|unlikely|Yes|Low interest|
+
+And from combining these two tables we can derive a set of contexts:
+
+- **Specific-necessary-non-tc**: There is a specific question for which the data under discussion is necessary (perhaps even sufficient). This may be one-off or repeated over time. Time is not critical, meaning that the question itself is not about the most up to date information.
+- **Specific-necessary-tc**: There is a specific question for which the data under discussion is necessary (perhaps even sufficient). This may be one-off or repeated over time. Time is critical: the question itself is about the most up to date information (e.g.: what are the latest information on a topic?)
+- **Specific-additional-non-tc**: There is one specific question to be answered, and this data is not necessary but maybe useful. Non time sensitive (as for the above definition)
+- **Thematic-repeated**: There is a range of related questions on a coherent topic. In general, these don’t focus on “real time data”/
+- **Thematic-repeated-tc**: There is a range of related questions on a coherent topic, which is intrinsically related to real time data.
+- **Explorative-repeated**: No specific question, data is used for exploration (cfr. Fishing expedition).
+
+
+
+
+| Header 1 | Header 2 |
+| -------- | -------- |
+| item 1 | item 2 |
+| item 3 | item 4 |
+
 
 
 
