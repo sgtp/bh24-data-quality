@@ -279,11 +279,41 @@ Independently of curation, not all types of data hold value through time in the 
 
 
 
+# What can be measured?
+For each of the factors that influence data value, what can we measure? We can distinguish what we could measure “in principle” from what we could measure “in practice”. We can also provide an indication on what type this measure could be (e.g.: normalised? qualitative?). Note that measures should be relative to the data itself, not to usage contexts. In general, measures relate to a point in time (as the state of global knowledge changes in time, so some of these measures will).
+Novelty
 
 
+## Novelty
+| | Theoretical measures | Practical measures | Measure type | Notes |
+|----------------------|----------------------|--------------------|--------------|-------|
+| “Real-time”-ness | % of new information respect the whole body | - For each dataset, delta vs previous versions - Same domain? Same originator? |Numeric normalised.|
+| Uniqueness | Inverse of the number of sources that present the same information. Maybe this is non-linear (the difference between an information being shared between 2 or 3 resources is more than between 10 or 11) | Yes/No? | ?| Can we really assess this? It would imply that all information is reconciled. |
+
+## Quality
+| Theoretical measures | Practical measures | Measure type | Notes |
+|----------------------|--------------------|--------------|-------|
+| Truth | Almost impossible! | Sampling/error rate | % of information with provenance |
+| Completeness | % of filled fields, respect to a global consensus of required fields | % of filled fields respect to the dataset definition | Numeric, normalised. |
 
 
+## Usability
+| Theoretical measures | Practical measures | Measure type | Notes |
+|----------------------|--------------------|--------------|-------|
+| Standardization | ? | Percentage of values from ontologies shared by one or more of other independent resources | Could be a normalised numeric, although perfection would not be 1 |
+| Interrelation | ? | Percentage of identifiers linked to one of more independent resources | Could be a normalised numeric, although perfection would not be 1 |
 
+## Extensiveness
+| Theoretical measures | Practical measures | Measure type | Notes |
+|----------------------|--------------------|--------------|-------|
+| Amount | This could be an absolute measure, or relative | Number of statements | Percentage of entities covered |
+| Detail | ? | Average number of statement per entity | Absolute? |
+
+## Maintenance
+| Theoretical measures | Practical measures | Measure type | Notes |
+|----------------------|--------------------|--------------|-------|
+| Curation model | We can define some curation categories: curation once, continuous curation | Presence of evidence codes? | Where this applies |
+| Freshness | Yes/No, maybe with a fuzzy assessment | ? | ? |
 
 
 
