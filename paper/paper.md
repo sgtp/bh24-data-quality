@@ -305,13 +305,13 @@ Novelty
 
 ## Extensiveness
 | |Theoretical measures | Practical measures | Measure type | Notes |
-||--------------------------------------------|--------------------|--------------|-------|
+|----------------------|----------------------|--------------------|--------------|-------|
 | Amount | This could be an absolute measure, or relative (e.g.: respect to a number of entities in the world) | - Number of statements - Percentage of entities covered - Total amount of entities covered | Absolute, or normalised. | Nonlinear correction needed: arguably not all facts have the same weight and there is tradeoff between quantity and complexity of obtaining information |
 | Detail | ? | Average number of statement per entity | Absolute? |Nonlinear correction needed|
 
 ## Maintenance
 || Theoretical measures | Practical measures | Measure type | Notes |
-||--------------------------------------------|--------------------|--------------|-------|
+|----------------------|----------------------|--------------------|--------------|-------|
 | We can define some curation categories: curation once, continuous curation. Maybe for these the amount of “coverage” in terms of entities. An alternative approach would be to think in terms of MM/data. Maybe each curation-model has its own metrics. |-  Presence of evidence codes? - N. of tickets opened/closed - N. of messages on mailing lists? | ? ||
 | Freshness | Yes/No, maybe with a fuzzy assessment | ? | ? ||
 
