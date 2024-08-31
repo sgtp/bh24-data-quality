@@ -455,6 +455,140 @@ We can follow this approach to prioritize aspects for each contexts.
 3. Quality
 4. Novelty
 
+# Reality check: a thought experiment 
+As a very extreme exercise at this stage, we can try to sketch some metrics as mental exercise, to see at least if the above exercise and definitions don’t lead to nonsensical conclusions.
+Evaluation experiment 1: evaluation of curation strategies
+In this scenario we are considering if we can measure the relative value of three curation strategies in different scenarios.
+
+## Conditions
+- A dataset consists of annotations of 10k genes (out of a total of 30k), in free text.
+- We consider an investment of a nominal value of 100.
+- An automatic process to standardize data to ontologies costs 0.01 x gene, with an error rate of 10%.
+- A manual curation costs 0.1 x gene, with an error rate of 1%.
+- Annotation of an extra gene costs 10 x gene.
+
+We want to evaluate the gain in value of different strategies in different scenarios:
+
+## Strategies
+- Automatic curation
+- Manual curation
+- Extra annotation
+
+## Scenarios
+- Specific-annotation-tc
+- Specific-annotation-non-tc
+- Explorative-repeated
+
+
+## Metrics and values
+### Novelty
+In this case we can consider a delta respect to the whole body of knowledge. We only compute the additional absolute value for this feature. For the three strategies, we have:
+
+|Strategy||
+|-----|-----|
+|Automatic curation|0|
+|Manual curation|0|
+|Extra annotation|10/30000=0.0003|
+
+In the above, we considered that an investment of 100 can result in the annotation of 10 extra genes, that correspond to an increase of 0.0003% in the overall body of knowledge (metric for novelty).
+
+Starting state: 0.
+
+### Quality
+The percentage of correct information. We consider all initial statements true and only the post-curation state.
+
+|Strategy||
+|-----|-----|
+|Automatic curation|39000/40000=0.975|
+|Manual curation|30990/31000=0.999|
+|Extra annotation|30010/30010=1|
+
+e.g.: automatic curation is delivering 9k new correct data points.
+
+Starting state: 1
+
+### Usability
+We consider the number of ontology annotations respect to the whole.
+
+|Strategy||
+|-----|-----|
+|Automatic curation|10000/30000=0.33|
+|Manual curation|1000/30000=0.033|
+|Extra annotation|10/3000=0.0033|
+
+Starting state: 0
+
+#### Amount
+We consider the coverage of the domain.
+
+|Strategy||
+|-----|-----|
+|Automatic curation|10000/30000=0.33|
+|Manual curation|10000/30000=0.33|
+|Extra annotation|10010/30000=0.33|
+
+### Maintenance
+We don’t consider this.
+
+## Combining single metrics
+We consider the order of relevance for each scenario:
+
+Specific-annotation-tc
+Novelty
+Amount
+Quality
+Usability
+
+
+Specific-annotation-non-tc
+### Quality
+
+
+Amount
+Novelty
+Usability
+Explorative-repeated
+Usability
+Amount
+Quality
+Novelty
+Factor
+1000
+100
+10
+1
+
+
+We start with an extremely crude approach, we sum all values, modifying them via a constant that is based on the ranking. We should increments based on the power of 10 (totally arbitrary). Addition will not result in anything sensibly normalized. Overall, we want to see only if this lead us to counterintuitive results or not.
+
+
+## Results
+
+
+Automatic curation
+Manual curation
+Extra annotation
+
+
+Nov.:0 Qual:0.975 Us:0.33
+Am: 0.33
+Nov.:0 Qual:0.999 Us:0.033 Am:0.33
+Nov.:0.0003 Qual:1 Us:0.0033 Am:0.33
+Specific-annotation-tc
+1000*Nov+100*Am+10*Qual+10*Us
+46.05
+46.29
+43.333
+Specific-annotation-non-tc
+1000*Qual+100*Am+`10*Nov+1*Us
+1011.3
+1035.3
+1036.3
+Explorative-repeated
+1000*Us+100*Am+10*Qual+1*Nov.
+372.75
+75.99
+46.3
 
 
 
@@ -464,42 +598,9 @@ We can follow this approach to prioritize aspects for each contexts.
 
 
 
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
 
 
 
-
-This document use Markdown and you can look at [this tutorial](https://www.markdowntutorial.com/).
-
-## Subsection level 2
-
-Please keep sections to a maximum of only two levels.
-
-## Tables and figures
-
-Tables can be added in the following way, though alternatives are possible:
-
-Table: Note that table caption is automatically numbered and should be
-given before the table itself.
-
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
-
-A figure is added with:
-
-![Caption for BioHackrXiv logo figure](./biohackrxiv.png)
-
-# Other main section on your manuscript level 1
-
-Lists can be added with:
-
-1. Item 1
-2. Item 2
 
 # Citation Typing Ontology annotation
 
