@@ -318,6 +318,152 @@ Novelty
 
 
 
+# Toward a development of metrics
+What contributes to data value in each context?
+One first step is to assess which dimensions are more relevant to data value for each of the identified contexts
+One way to address this is to ask the question: in a context, would I “sacrifice” one factor for another? (it is still be a bit subjective, at least at this stage, but the process helps in being more consistent).
+Basically, for each context, we can fill a trade-off matrix as below:
+
+Trade-off matrix example:
+
+
+| |Novelty/time| Quality/truth| Quality/completeness| Usability/standardization| Usability/interrelation| Amount/extensivity| Amount/detail|Maintenance/curation model| Maintenance/freshness| Novelty/time|
+|------|------|------| ------| ------| ------| ------|------| ------| ------|-----|
+|Novelty/uniq|No question||||||||||
+|Quality/truth|trade?|No question||||||||||
+|Quality/completeness|trade?|trade?|No question||||||||
+|Usability/standardization|trade?|trade?|trade?|No question|||||||
+|Usability/interrelation|trade?|trade?|trade?|trade?|No question||||||
+|Amount/extensivity|trade?|trade?|trade?|trade?|trade?|No question|||||
+|Amount/detail|trade?|trade?|trade?|trade?|trade?|trade?|No question||||
+|Maintenance/curation model|trade?|trade?|trade?|trade?|trade?|trade?|trade?|No question|||
+|Maintenance/freshness|trade?|trade?|trade?|trade?|trade?|trade?|trade?|trade?|No question||
+|Novelty/time|trade?|trade?|trade?|trade?|trade?|trade?|trade?|trade?|trade?|trade?|No question|
+
+Elements on the diagonal are excluded from a trade-off questions, and we indicate a trade question only for part of the matrix as answers are symmetric.
+
+For the sake of simplicity, we can aggregate dimensions at the higher level, as follow:
+
+Would I trade x for y?
+||Novelty|Quality|Usability|Amount|Maintenance|Score|
+|-----|-----|-----|-----|-----|-----|-----|
+|Novelty||No|||||
+|Quality|Yes||No|?|Yes|-1|
+|Usability|||||||
+|Amount|||||||
+|Maintenance|||||||
+
+Here we also introduce a simple score for each dimension, defined as follows: for each row, we add 1 each time we find a “No” (would not trade for another factor), -1 if ‘Yes” and we keep the value unvaried in case of dubious or undefined cases.
+We can then use the resulting value to sort the factors in order of relevance, for a given context.
+
+We can follow this approach to prioritize aspects for each contexts.
+
+## Context: Specific-necessary-non-tc
+
+|Would I trade x for y?|Novelty|Quality|Usability|Amount|Maintenance|Score|
+|-----|-----|-----|-----|-----|-----|-----|
+|Novelty||Yes|No|?|Yes|-1|
+|Quality|No||No|?|!|2|
+|Usability|Yes|Yes||Yes|Yes|-4|
+|Amount|?|?|No||?|1|
+|Maintenance|No|!|No|?||2|
+
+
+#### Ranking
+1. Quality/Maintenance
+2. Amount
+3. Novelty
+4. Usability
+
+## Specific-necessary-tc
+
+|Would I trade x for y?|Novelty|Quality|Usability|Amount|Maintenance|Score|
+|-----|-----|-----|-----|-----|-----|-----|
+|Novelty||No|No|No|No|4|
+|Quality|Yes||Yes|?|!|-2|
+|Usability|Yes|No||Yes|Yes|-2|
+|Amount|Yes|?|No||?|0|
+|Maintenance|Yes|!|No|?||0|
+
+### Ranking
+1. Novelty
+2. Amount/Maintenance
+3. Quality/Usability
+
+
+## Specific-additional-non-tc
+
+|Would I trade x for y?|Novelty|Quality|Usability|Amount|Maintenance|Score|
+|-----|-----|-----|-----|-----|-----|-----|
+|Novelty||Yes|Yes|Yes|Yes|-4|
+|Quality|No||No|?|!|2|
+|Usability|No|Yes||?|No|1|
+|Amount|No|?|?||?|1|
+|Maintenance|No|!|Yes|?||0|
+
+### Ranking
+1. Quality
+2. Usability/Amount
+3. Maintenance
+4. Novelty
+
+## Thematic-repeated
+
+|Would I trade x for y?|Novelty|Quality|Usability|Amount|Maintenance|Score|
+|-----|-----|-----|-----|-----|-----|-----|
+|Novelty||?|Yes|Yes|No|-1|
+|Quality|?||No|?|!|1|
+|Usability|No|Yes||?|No|1|
+|Amount|No|?|?||Yes|0|
+|Maintenance|Yes|!|Yes|No||-1|
+
+### Ranking
+1. Quality, Usability
+2. Amount
+3. Novelty, maintenance
+
+## Thematic-repeated-tc
+
+|Would I trade x for y?|Novelty|Quality|Usability|Amount|Maintenance|Score|
+|-----|-----|-----|-----|-----|-----|-----|
+|Novelty||No|No|No|No|4|
+|Quality|Yes||Yes|?|!|-2|
+|Usability|Yes|No||?|No|1|
+|Amount|Yes|?|?||Yes|1|
+|Maintenance|Yes|!|Yes|No||-1|
+
+
+### Ranking
+1. Novelty
+2. Usability
+3. Amount, Maintenance
+4. Quality
+
+## Explorative-repeated
+
+|Would I trade x for y?|Novelty|Quality|Usability|Amount|Maintenance|Score|
+|-----|-----|-----|-----|-----|-----|-----|
+|Novelty||Yes|Yes|Yes|Yes|-4|
+|Quality|No||?|Yes|!|0|
+|Usability|No|?||No|?|2|
+|Amount|No|No|Yes||?|1|
+|Maintenance|No|!|?|?||1|
+
+### Ranking
+1. Usability
+2. Amount, maintenance
+3. Quality
+4. Novelty
+
+
+
+
+
+
+
+
+
+
 | Header 1 | Header 2 |
 | -------- | -------- |
 | item 1 | item 2 |
