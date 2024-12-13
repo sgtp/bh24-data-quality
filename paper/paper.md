@@ -533,30 +533,12 @@ We don’t consider this.
 ## Combining single metrics
 We consider the order of relevance for each scenario:
 
-Specific-annotation-tc
-Novelty
-Amount
-Quality
-Usability
-
-
-Specific-annotation-non-tc
-### Quality
-
-
-Amount
-Novelty
-Usability
-Explorative-repeated
-Usability
-Amount
-Quality
-Novelty
-Factor
-1000
-100
-10
-1
+|scenario|1st factor|2nd factor|3rd factor|4th factor|
+|-----|-----|-----|-----|-----|
+|Specific-anotation-tc|Novelty|Amount|Quality / Usability |
+|Specific-annotation-non-tc|Quality|Amount|Novelty|Usability|
+|Explorative-repeated|Usability|Amount|Quality|Novelty|
+|factor weight|1000|100|10|1|
 
 
 We start with an extremely crude approach, we sum all values, modifying them via a constant that is based on the ranking. We should increments based on the power of 10 (totally arbitrary). Addition will not result in anything sensibly normalized. Overall, we want to see only if this lead us to counterintuitive results or not.
@@ -564,31 +546,12 @@ We start with an extremely crude approach, we sum all values, modifying them via
 
 ## Results
 
-
-Automatic curation
-Manual curation
-Extra annotation
-
-
-Nov.:0 Qual:0.975 Us:0.33
-Am: 0.33
-Nov.:0 Qual:0.999 Us:0.033 Am:0.33
-Nov.:0.0003 Qual:1 Us:0.0033 Am:0.33
-Specific-annotation-tc
-1000*Nov+100*Am+10*Qual+10*Us
-46.05
-46.29
-43.333
-Specific-annotation-non-tc
-1000*Qual+100*Am+`10*Nov+1*Us
-1011.3
-1035.3
-1036.3
-Explorative-repeated
-1000*Us+100*Am+10*Qual+1*Nov.
-372.75
-75.99
-46.3
+||Automatic curation|Manual curation|Extra annotation|
+|-----|-----|-----|-----|
+||Nov.:0 Qual:0.975 Us:0.33 Am: 0.33|Nov.:0 Qual:0.999 Us:0.033 Am:0.33|Nov.:0.0003 Qual:1 Us:0.0033 Am:0.33|
+|Specific-annotation-tc (1000*Nov+100*Am+10*Qual+10*Us)|46.05|46.29|43.333|
+|Specific-annotation-non-tc (1000*Qual+100*Am+`10*Nov+1*Us)|1011.3|1035.3|1036.3|
+|Explorative-repeated (1000*Us+100*Am+10*Qual+1*Nov.)|372.75|75.99|46.3|
 
 
 
