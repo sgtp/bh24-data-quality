@@ -7,48 +7,48 @@ tags:
   - data economics
 authors:
   - name: Andrea Splendiani
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0002-3201-9617
     affiliation: IQVIA
   - name: Erick Antezana
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0002-2497-8236
     affiliation: United Nations
   - name: Achille Zappa
-    orcid: 0000-0000-0000-0000
-    affiliation: TBD
+    orcid: 0000-0003-4040-9620
+    affiliation: Soka University
   - name: Yasunori Yamamoto
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0002-6943-6887
     affiliation: DBCLS
 
 date: 30 August 2022
 cito-bibliography: paper.bib
 event: BioHack24JP
-biohackathon_name: "BioHackathon Japan 2024"
-biohackathon_url:   "https://biohackathon-europe.org/"
-biohackathon_location: "Fukushima, Japan, 2024"
+biohackathon_name: 'BioHackathon Japan 2024'
+biohackathon_url:   'https://biohackathon.org'
+biohackathon_location: 'Fukushima, Japan, 2024'
 group: Project 26
-# URL to project git repo --- should contain the actual paper.md:
-git_url: https://github.com/biohackrxiv/publication-template
-# This is the short authors description that is used at the
-# bottom of the generated paper (typically the first two authors):
-authors_short: Andrea Splendiani \emph{et al.}
+git_url: 'https://github.com/sgtp/bh24-data-quality/edit/main/paper/paper.md'
+authors_short: 'Andrea Splendiani \emph{et al.}, on the value of data (0.3)'
+
 ---
 
 
 # Preface
 
-This the version a collaborative paper "on the value of data", that has been iterated at the BioHackathon in Fukushima, 2024.
+This the version a collaborative paper "on the value of data", that resulted from the discussions at the BioHackathon in Fukushima, 2024.
+The live version of this document can be found at [@citation:valueOfData].
 
 # Introduction
 What is the value of a data asset?
-It’s a simple question, somehow abstract and hard to answer, as the value of a data depends on its use, and can be somehow subjective. 
-However, this is not unique to data, and it’s a question that we are called to answer quite frequently, if implicitly, as we routinely need to make decisions about data (what to acquire, qhat to discard, what to curate,...)
-If we think in terms of FAIR data, the question is how much FAIR is fair enough (and when), and you can’t answer this question without a notion of value.
+
+This is a simple question, quite intuitive to formulate, but that is somehow abstract and hard to answer, as the value of a data depends on its use, or it is even subjective. 
+It is however a question that we are called to answer quite frequently, if implicitly, as we routinely need to make decisions about data (what to acquire, qhat to discard, what to curate,...). And the difficulty of putting a value on something is not unique to data.
+If we think in terms of FAIR data, it is important to determine how much FAIR is fair enough, and it is impossible to answer this question without a notion of value.
 This document attempts to sketch a framework to conduct data evaluation, in the view of driving data related decisions.
-To focus and simplify the thinking, we consider that the value of a dataset resides in its use to answer a question (one or more business or research questions). 
+To simplify the task, we focus on a value of a dataset as its utility to answer a question (one or more business or research questions). 
 
 ## What is data ?
-We consider here data as an information asset in its broader sense (not only the representation of such information), extending its meaning to all additional information and context that can be itself represented in a data artifact (in principle we would include all layers of the DKW [DKW] mode here, insofar they can be represented as an artifact of service that we need to evaluate).
-To this respect, and as noted in [EMA], we don’t make a distinction between data and metadata as, from the point of view of delivering value, both are needed and integrated: “42” won’t have any value unless it’s known what it represents. Furthermore, from a technical perspective, the boundary between data and metadata is quite fluid, e.g.L in self describing standards.
+We consider here data as an information asset in its broader sense (not only the representation of such information), extending its meaning to all additional information and context that can be itself represented in a data artifact (in principle we would include all layers of the DKW [@citation:DKW] mode here, insofar they can be represented as an artifact of service that we need to evaluate).
+To this respect, and as noted in [@citation:EMADQF], we don’t make a distinction between data and metadata as, from the point of view of delivering value, both are needed and integrated: “42” won’t have any value unless it’s known what it represents. Furthermore, from a technical perspective, the boundary between data and metadata is quite fluid, as for instance self describing standards naturally combine both aspects.
 
 Arguably how much metadata is needed is not a fundamentally different question from: how much data or how much precision is needed.
 
@@ -56,17 +56,17 @@ Arguably how much metadata is needed is not a fundamentally different question f
 In its abstract meaning, value is a potential of something to deliver some utility of any sort (material, or even subjective). In practical terms, often value is associated with an “evaluation” resulting in a number, so that different items can be in some way compared vs their respective utility.
 In simple terms, we can think that a dataset A is more valuable than B if, for a given use and all conditions being equal, A would be preferred to B.
 In this document we consider value as the result of an evaluation that takes place to drive data management decisions (e.g.: data acquisition, retention, curation…)
-To avoid confusion, we call distinct but related concepts to value:
+To avoid confusion, we recall distinct but related concepts to value:
 Price is an evaluation done in financial terms with the focus on balancing the utility of producers and buyers of a given good.
 Cost is the evaluation of the resources needed to generate (or acquire) a given asset.
-It is also worth noting that value is dynamic, as it changes both in relation to the assets evolution, and its contex
+It is also worth noting that value is dynamic, as it changes both in relation to the assets evolution, and its contex.
 
 ## General approaches to data evaluation
-A review of current approaches for data evaluation can be found in [R1]. This distinguish between three main models to evaluate data:
-- **Market driven**: related to the cost of making a dataset, the sale price of an overall data asset, or the evaluation of oa company whose primary focus is data generation.
+A review of current approaches for data evaluation can be found in [@citation:Fleckenstein2023]. This distinguishes between three main models to evaluate data:
+- **Market driven**: related to the cost of making a dataset, the sale price of an overall data asset, or the evaluation of a company whose primary focus is data generation.
 - **Economic impact based**: related to the estimated impact of the availability of such data for an overall economy.
 - **Dimensional based**: estimating the impact of a given dataset to a business, via metrics defined based on datasets dimensions.
-Of these, we consider the third category more adequate to take data investment decisions by part of an organization. Market driven models can provide a lower and upper floor for viability, but they really make sense only if data is effectively purchased or sold.
+Of these, we consider the third approach as more adequate to take data investment decisions by an organization. Market driven models can provide a lower and upper floor for viability, but they really make sense only if data is effectively purchased or sold.
 Economic impact models are more suited to policy decisions, as they don’t easily capture the economic impact for a given organization investing in data.
 
 ## Data evaluation strategy
@@ -80,27 +80,29 @@ The intention of this document is not to define finalized and applicable metrics
 # The context (purpose) of data use
 Obviously, data is valuable insofar it has a (possibly potential) purpose, e.g.: to generate new insights, or for instance to validate an hypothesis. Therefore in order to assess the value of data we need to characterize how data relates to its usage to address a given purpose. 
 We can, in a first approximation, consider a “question” (e.g.: a research question, or a business question) as the “purpose” of a dataset.
-We can then break down how we characterize such a question, and how we characterize the relation of a dataset to such a question, and life cycle of such question.
-Can we then identify some “typical and relative” contexts?
+We can then break down how we characterize such a question, and how we characterize the relation of a dataset to such a question, as well as the life cycle of such question.
+Can we then identify some “typical and relative” patterns for such questions, corresponding to different classes, or contexts, of use?
 
 ## Aspects characterizing the business need
+One way to characterise a "data question" is based on its relation to its intended usage in a business, by considering:
 ### Breadth
 Whether the use of data is specific to a given question, or just explorative.
-- Specific. One single question to be answered.
-- Thematic. A class of questions on a specific topic to be answered.
-- Explorative. No specific question. Just checking the data to see what is in it.
+- **Specific**. Data is intended to be used to answer one specific question.
+- **Thematic**. Data is intended to be used to answer a range of related questions.
+- **Explorative**. Data is not intended to answer a specific question, but rather availble for exploration.
 ### Question life cycle
 Where a question is in its life cycle:
-- Initiating
-- Mature
-- Phase-out
+- **Initiating**. The question the data is called to answer is in the its initial phases, vs delivering value.
+- **Mature**. The question the data is called to answer is routinely delivering value.
+- **Phase-out**. The question the data is called to answer is being phased out.
 
 ## Aspects characterizing the usage of data to address a business need
+Another way to characterise data is how it relates to the business question.
 ### Competitiveness
-Whether the use of data is providing a competitive advantage, with the implication that there is value in data that others don’t have (yet), or not.
-- **Competitive**: having information that others don’t have (sub-case: having it earlier than others) is of value. Example: latest news.
-- **Non-competitive**: having information that others don’t have makes no difference. 
-- **Synergistic**:  having information that others don’t have is detrimental. Example: can a case be reference data? The less shared, the worse?
+Whether the data is providing a competitive advantage in answering a qustion (with the implication that there is value in data that others don’t have access to).
+- **Competitive**: Data is contributing value by providing information that others don’t have (sub-case: having it earlier than others). Example: latest news.
+- **Non-competitive**: There is no particualar value in data being exclusive to a user. 
+- **Synergistic**:  Data is providing value by being shared with others. Example: reference data, where the more this is shared, the more data integration costs are minimized.
 ### Recurrence
 The relation between purpose and time.
 Another possible category is the “life-span”. Is the task a once-only task, or a repeated task?
@@ -112,6 +114,7 @@ Whether data usage is in a confidential context and is restricted in the way it 
 - **Public**
 
 ## Relations of a dataset to a purpose
+Another category is in what ways a dataset contributes to answer a business question.
 ### Relatedness
 How the dataset relates to a specific investigation. One way to think about this is to have a set of levels by which data assets can be ordered:
 Necessary and sufficient. This data asset is all that is needed to clearly address a purpose (e.g.: needs a list of addresses per postcodes in a country, this could be in a single data asset from the government)
@@ -121,14 +124,14 @@ Necessary and sufficient. This data asset is all that is needed to clearly addre
 **Unrelated**. The dataset is in principle unrelated to the task at hand (e.g.: a food recipe dataset for weather forecast)
 ### Generation
 Whether the dataset is generated for a specific task, or if it is “re-used”.
-- **Primary whether** the dataset is generated on purpose for a given topic
-- **Secondary** whether a dataset, generated for another use case, can be repurposed
-- **A-priori** whether a dataset is provided independently from use cases.
+- **Primary whether**. the dataset is generated on purpose for a given topic
+- **Secondary**. whether a dataset, generated for another use case, can be repurposed
+- **A-priori**. whether a dataset is provided independently from use cases.
 ### Role
-- **Generic input**
-- **Training**
-- **Test**
-- **Validation**
+- **Generic input**. The dataset is intended to provide information that directly or indirectly answer the question.
+- **Training**. The dataset is intended to be used for training.
+- **Test**. The dataset is intended to be used for testing.
+- **Validation**. The dataset is intended to be used for validation.
 ## Data Life cycle
 Where data stands its generation life cycle. Any assessment or qualification of a data in its value needs to be related to the project stage when it has been produced and its generation and role.
 Usually any project as three stages:  
@@ -150,7 +153,8 @@ We have defined several aspects to characterize a data usage context, or questio
 - The life cycle of a question (initiation, maturity, phase out)
 
 Different combinations of the above define different scenarios under which data can be valued differently: the value of data being standardized, for instance, is intuitively more valuable if this is used for exploration in the context of other data, than in a one-off data analysis. 
-We proceed now by identify some archetypical scenarios
+
+We proceed now to identify some archetypical scenarios or contexts.
 
 There could be different criteria for defining such contexts. We could think in terms of type of information (e.g.: laboratory data vs reports), or in terms of communities (cfr. FAIRmetrics).
 As a first tentative, we consider some combination of the above aspects.
@@ -168,7 +172,7 @@ An assessment is reported in the following table.
 | Unrelated | No| No| Little |
 
 
-From this can we identify, with some simplification, four contexts here below:
+From this can we identify, with some simplification, four contexts reported below:
 
 
 **1) specific-necessary**
@@ -208,7 +212,8 @@ Non defined task, but clear range of questions asked. We can this simply themati
 |Unrelated|Little|
 
 Non defined questions. Typical purpose is data mining. We call this simply explorative.
-We can now try to  assess in which ways these context relate to the data life-span, or more in general its relation to sustainability:
+
+We can now try to assess in which ways these context relate to the data life-span, or more in general their relation to sustainability:
 
 
 ||one-off|repeated|repeated/time critical|
@@ -456,9 +461,9 @@ We can follow this approach to prioritize aspects for each contexts.
 4. Novelty
 
 # Reality check: a thought experiment 
-As a very extreme exercise at this stage, we can try to sketch some metrics as mental exercise, to see at least if the above exercise and definitions don’t lead to nonsensical conclusions.
-Evaluation experiment 1: evaluation of curation strategies
-In this scenario we are considering if we can measure the relative value of three curation strategies in different scenarios.
+As a (rather extreme) thought experiment, we can consider a data evaluation problem, sketch some metrics, and apply the above thinging, to see if the resulting data evaluation is at least consistent, in that it doesn’t lead to nonsensical conclusions.
+
+The problem that we are considering is the evaluation of data curation strategies: given three different scenarios, what curation strategy leads to the highest value of data per moeny invested? We focus on the relative value of curation strategies in these scenarios as this provides a "measure" abstract enough that can compensate the noise deriving from all assumption we made, and still provide for some intuitive evaluation of results.
 
 ## Conditions
 - A dataset consists of annotations of 10k genes (out of a total of 30k), in free text.
@@ -535,8 +540,8 @@ We consider the order of relevance for each scenario:
 
 |scenario|1st factor|2nd factor|3rd factor|4th factor|
 |-----|-----|-----|-----|-----|
-|Specific-anotation-tc|Novelty|Amount|Quality / Usability |
-|Specific-annotation-non-tc|Quality|Amount|Novelty|Usability|
+|Specific-necessary-tc|Novelty|Amount|Quality / Usability |
+|Specific-necessary-non-tc|Quality|Amount|Novelty|Usability|
 |Explorative-repeated|Usability|Amount|Quality|Novelty|
 |factor weight|1000|100|10|1|
 
@@ -549,10 +554,18 @@ We start with an extremely crude approach, we sum all values, modifying them via
 ||Automatic curation|Manual curation|Extra annotation|
 |-----|-----|-----|-----|
 ||Nov.:0 Qual:0.975 Us:0.33 Am: 0.33|Nov.:0 Qual:0.999 Us:0.033 Am:0.33|Nov.:0.0003 Qual:1 Us:0.0033 Am:0.33|
-|Specific-annotation-tc (1000*Nov+100*Am+10*Qual+10*Us)|46.05|46.29|43.333|
-|Specific-annotation-non-tc (1000*Qual+100*Am+`10*Nov+1*Us)|1011.3|1035.3|1036.3|
+|Specific-necessary-tc (1000*Nov+100*Am+10*Qual+10*Us)|46.05|46.29|43.333|
+|Specific-necessary-non-tc (1000*Qual+100*Am+`10*Nov+1*Us)|1011.3|1035.3|1036.3|
 |Explorative-repeated (1000*Us+100*Am+10*Qual+1*Nov.)|372.75|75.99|46.3|
 
+
+
+Specific-necessary-non-tc: There is a specific question for which the data under discussion is necessary (perhaps even sufficient). This may be one-off or repeated over time. Time is not critical, meaning that the question itself is not about the most up to date information.
+Specific-necessary-tc: There is a specific question for which the data under discussion is necessary (perhaps even sufficient). This may be one-off or repeated over time. Time is critical: the question itself is about the most up to date information (e.g.: what are the latest information on a topic?)
+Specific-additional-non-tc: There is one specific question to be answered, and this data is not necessary but maybe useful. Non time sensitive (as for the above definition)
+Thematic-repeated: There is a range of related questions on a coherent topic. In general, these don’t focus on “real time data”/
+Thematic-repeated-tc: There is a range of related questions on a coherent topic, which is intrinsically related to real time data.
+Explorative-repeated: No specific question, data is used for exploration (cfr. Fishing expedition).
 
 
 
