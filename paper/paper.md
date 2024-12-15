@@ -543,10 +543,10 @@ We consider the order of relevance for each scenario:
 |Specific-necessary-tc|Novelty|Amount|Quality / Usability |
 |Specific-necessary-non-tc|Quality|Amount|Novelty|Usability|
 |Explorative-repeated|Usability|Amount|Quality|Novelty|
-|factor weight|1000|100|10|1|
+|factor weight|8|4|2|1|
 
 
-We start with an extremely crude approach, we sum all values, modifying them via a constant that is based on the ranking. We should increments based on the power of 10 (totally arbitrary). Addition will not result in anything sensibly normalized. Overall, we want to see only if this lead us to counterintuitive results or not.
+We start with an extremely crude approach, we sum all values, modifying them via a constant that is based on the ranking. We map the order of relevance to a power of two, so that a metric will weight double the following metrics in order of least relevance (totally arbitrary). Addition will not result in anything sensibly normalized. Overall, we want to see only if this leads us to counterintuitive results or not.
 
 
 ## Results
@@ -554,68 +554,23 @@ We start with an extremely crude approach, we sum all values, modifying them via
 ||Automatic curation|Manual curation|Extra annotation|
 |-----|-----|-----|-----|
 ||Nov.:0 Qual:0.975 Us:0.33 Am: 0.33|Nov.:0 Qual:0.999 Us:0.033 Am:0.33|Nov.:0.0003 Qual:1 Us:0.0033 Am:0.33|
-|Specific-necessary-tc (1000*Nov+100*Am+10*Qual+10*Us)|46.05|46.29|43.333|
-|Specific-necessary-non-tc (1000*Qual+100*Am+`10*Nov+1*Us)|1011.3|1035.3|1036.3|
-|Explorative-repeated (1000*Us+100*Am+10*Qual+1*Nov.)|372.75|75.99|46.3|
+|Specific-necessary-tc (1000*Nov+100*Am+10*Qual+10*Us)|3.6|3.351|3.3257|
+|Specific-necessary-non-tc (1000*Qual+100*Am+`10*Nov+1*Us)|9.45|9.345|9.3233|
+|Explorative-repeated (1000*Us+100*Am+10*Qual+1*Nov.)|5.91|3.582|3.3467|
 
 
 
-Specific-necessary-non-tc: There is a specific question for which the data under discussion is necessary (perhaps even sufficient). This may be one-off or repeated over time. Time is not critical, meaning that the question itself is not about the most up to date information.
-Specific-necessary-tc: There is a specific question for which the data under discussion is necessary (perhaps even sufficient). This may be one-off or repeated over time. Time is critical: the question itself is about the most up to date information (e.g.: what are the latest information on a topic?)
-Specific-additional-non-tc: There is one specific question to be answered, and this data is not necessary but maybe useful. Non time sensitive (as for the above definition)
-Thematic-repeated: There is a range of related questions on a coherent topic. In general, these don’t focus on “real time data”/
-Thematic-repeated-tc: There is a range of related questions on a coherent topic, which is intrinsically related to real time data.
-Explorative-repeated: No specific question, data is used for exploration (cfr. Fishing expedition).
+Does this make any sense?
+
+We see as in all cases the automatic curation results as the best strategy, albeit by a higher margin in the explorative scenario. Intuitively, we should expect that in an exploratory scenario, extensiveness somehow trumps quality, as not all data will be relative to a question, and at least some curation will help finding relevant, maybe imperfect, information (which is better than no information at all).
+However we would imagine the reverse to hold in scenarios where data is directly relevant to answer a question, even more so when additional (novel) information provides a competitive advantage.
+On a close look though, it is true that under our assumptions about costs, manual curation or extra annotation simply don’t add enough data, respect to the whole (note that we reason a-priori respect to the relevance of some specific information).
+At the very least this experiment gave us a way to reflect on the price point at each some strategy (thought to be advantageous) actually provides value.
+
+This is clearly very preliminary work, but at least it provides the outline of an approach to develop value metrics for data.
 
 
 
-
-
-
-
-
-
-
-
-
-# Citation Typing Ontology annotation
-
-You can use [CiTO](http://purl.org/spar/cito/2018-02-12) annotations, as explained in [this BioHackathon Europe 2021 write up](https://raw.githubusercontent.com/biohackrxiv/bhxiv-metadata/main/doc/elixir_biohackathon2021/paper.md) and [this CiTO Pilot](https://www.biomedcentral.com/collections/cito).
-Using this template, you can cite an article and indicate _why_ you cite that article, for instance DisGeNET-RDF [@citesAsAuthority:Queralt2016].
-
-The syntax in Markdown is as follows: a single intention annotation looks like
-`[@usesMethodIn:Krewinkel2017]`; two or more intentions are separated
-with colons, like `[@extends:discusses:Nielsen2017Scholia]`. When you cite two
-different articles, you use this syntax: `[@citesAsDataSource:Ammar2022ETL; @citesAsDataSource:Arend2022BioHackEU22]`.
-
-Possible CiTO typing annotation include:
-
-* citesAsDataSource: when you point the reader to a source of data which may explain a claim
-* usesDataFrom: when you reuse somehow (and elaborate on) the data in the cited entity
-* usesMethodIn
-* citesAsAuthority
-* citesAsEvidence
-* citesAsPotentialSolution
-* citesAsRecommendedReading
-* citesAsRelated
-* citesAsSourceDocument
-* citesForInformation
-* confirms
-* documents
-* providesDataFor
-* obtainsSupportFrom
-* discusses
-* extends
-* agreesWith
-* disagreesWith
-* updates
-* citation: generic citation
-
-
-# Results
-
-
-# Discussion
 
 ...
 
