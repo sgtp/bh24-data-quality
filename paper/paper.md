@@ -8,7 +8,7 @@ tags:
 authors:
   - name: Andrea Splendiani
     orcid: 0000-0002-3201-9617
-    affiliation: IQVIA
+    affiliation: 1
   - name: Erick Antezana
     orcid: 0000-0002-2497-8236
     affiliation: United Nations
@@ -18,6 +18,9 @@ authors:
   - name: Yasunori Yamamoto
     orcid: 0000-0002-6943-6887
     affiliation: DBCLS
+affiliations:
+  - name: IQVIA
+    index: 1 
 
 date: 30 August 2022
 cito-bibliography: paper.bib
@@ -27,7 +30,7 @@ biohackathon_url:   'https://biohackathon.org'
 biohackathon_location: 'Fukushima, Japan, 2024'
 group: Project 26
 git_url: 'https://github.com/sgtp/bh24-data-quality/edit/main/paper/paper.md'
-authors_short: 'Andrea Splendiani \emph{et al.}, on the value of data (0.3)'
+authors_short: 'Andrea Splendiani \emph{et al.}, on the value of data (#BioHackJP version)'
 
 ---
 
