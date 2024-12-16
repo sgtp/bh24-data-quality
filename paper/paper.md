@@ -11,16 +11,22 @@ authors:
     affiliation: 1
   - name: Erick Antezana
     orcid: 0000-0002-2497-8236
-    affiliation: United Nations
+    affiliation: 2
   - name: Achille Zappa
     orcid: 0000-0003-4040-9620
-    affiliation: Soka University
+    affiliation: 3
   - name: Yasunori Yamamoto
     orcid: 0000-0002-6943-6887
-    affiliation: DBCLS
+    affiliation: 4
 affiliations:
-  - name: IQVIA
-    index: 1 
+  - name: IQVIA, CH
+    index: 1
+  - name: United Nations, ES 
+    index: 2
+  - name: Soka University, JP
+    index: 3
+  - name: DBCLS, JP
+    index: 4 
 
 date: 30 August 2022
 cito-bibliography: paper.bib
@@ -66,9 +72,9 @@ It is also worth noting that value is dynamic, as it changes both in relation to
 
 ## General approaches to data evaluation
 A review of current approaches for data evaluation can be found in [@citation:Fleckenstein2023]. This distinguishes between three main models to evaluate data:
-- **Market driven**: related to the cost of making a dataset, the sale price of an overall data asset, or the evaluation of a company whose primary focus is data generation.
-- **Economic impact based**: related to the estimated impact of the availability of such data for an overall economy.
-- **Dimensional based**: estimating the impact of a given dataset to a business, via metrics defined based on datasets dimensions.
+  - **Market driven**: related to the cost of making a dataset, the sale price of an overall data asset, or the evaluation of a company whose primary focus is data generation.
+  - **Economic impact based**: related to the estimated impact of the availability of such data for an overall economy.
+  - **Dimensional based**: estimating the impact of a given dataset to a business, via metrics defined based on datasets dimensions.
 Of these, we consider the third approach as more adequate to take data investment decisions by an organization. Market driven models can provide a lower and upper floor for viability, but they really make sense only if data is effectively purchased or sold.
 Economic impact models are more suited to policy decisions, as they don’t easily capture the economic impact for a given organization investing in data.
 
@@ -90,22 +96,22 @@ Can we then identify some “typical and relative” patterns for such questions
 One way to characterise a "data question" is based on its relation to its intended usage in a business, by considering:
 ### Breadth
 Whether the use of data is specific to a given question, or just explorative.
-- **Specific**. Data is intended to be used to answer one specific question.
-- **Thematic**. Data is intended to be used to answer a range of related questions.
-- **Explorative**. Data is not intended to answer a specific question, but rather availble for exploration.
+  - **Specific**. Data is intended to be used to answer one specific question.
+  - **Thematic**. Data is intended to be used to answer a range of related questions.
+  - **Explorative**. Data is not intended to answer a specific question, but rather availble for exploration.
 ### Question life cycle
 Where a question is in its life cycle:
-- **Initiating**. The question the data is called to answer is in the its initial phases, vs delivering value.
-- **Mature**. The question the data is called to answer is routinely delivering value.
-- **Phase-out**. The question the data is called to answer is being phased out.
+  - **Initiating**. The question the data is called to answer is in the its initial phases, vs delivering value.
+  - **Mature**. The question the data is called to answer is routinely delivering value.
+  - **Phase-out**. The question the data is called to answer is being phased out.
 
 ## Aspects characterizing the usage of data to address a business need
 Another way to characterise data is how it relates to the business question.
 ### Competitiveness
 Whether the data is providing a competitive advantage in answering a qustion (with the implication that there is value in data that others don’t have access to).
-- **Competitive**: Data is contributing value by providing information that others don’t have (sub-case: having it earlier than others). Example: latest news.
-- **Non-competitive**: There is no particualar value in data being exclusive to a user. 
-- **Synergistic**:  Data is providing value by being shared with others. Example: reference data, where the more this is shared, the more data integration costs are minimized.
+  - **Competitive**: Data is contributing value by providing information that others don’t have (sub-case: having it earlier than others). Example: latest news.
+  - **Non-competitive**: There is no particualar value in data being exclusive to a user. 
+  - **Synergistic**:  Data is providing value by being shared with others. Example: reference data, where the more this is shared, the more data integration costs are minimized.
 ### Recurrence
 The relation between purpose and time.
 Another possible category is the “life-span”. Is the task a once-only task, or a repeated task?
