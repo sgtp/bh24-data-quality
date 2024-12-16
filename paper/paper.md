@@ -72,9 +72,11 @@ It is also worth noting that value is dynamic, as it changes both in relation to
 
 ## General approaches to data evaluation
 A review of current approaches for data evaluation can be found in [@citation:Fleckenstein2023]. This distinguishes between three main models to evaluate data:
+
   - **Market driven**: related to the cost of making a dataset, the sale price of an overall data asset, or the evaluation of a company whose primary focus is data generation.
   - **Economic impact based**: related to the estimated impact of the availability of such data for an overall economy.
   - **Dimensional based**: estimating the impact of a given dataset to a business, via metrics defined based on datasets dimensions.
+    
 Of these, we consider the third approach as more adequate to take data investment decisions by an organization. Market driven models can provide a lower and upper floor for viability, but they really make sense only if data is effectively purchased or sold.
 Economic impact models are more suited to policy decisions, as they don’t easily capture the economic impact for a given organization investing in data.
 
