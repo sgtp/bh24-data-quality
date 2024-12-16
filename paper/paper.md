@@ -56,7 +56,7 @@ This document attempts to sketch a framework to conduct data evaluation, in the 
 To simplify the task, we focus on a value of a dataset as its utility to answer a question (one or more business or research questions). 
 
 ## What is data ?
-We consider here data as an information asset in its broader sense (not only the representation of such information), extending its meaning to all additional information and context that can be itself represented in a data artifact (in principle we would include all layers of the DKW [@citation:DKW] mode here, insofar they can be represented as an artifact of service that we need to evaluate).
+We consider here data as an information asset in its broader sense (not only the representation of such information), extending its meaning to all additional information and context that can be itself represented in a data artifact (in principle we would include all layers of the DIKW [@citation:DIKW] mode here, insofar they can be represented as an artifact of service that we need to evaluate).
 To this respect, and as noted in [@citation:EMADQF], we don’t make a distinction between data and metadata as, from the point of view of delivering value, both are needed and integrated: “42” won’t have any value unless it’s known what it represents. Furthermore, from a technical perspective, the boundary between data and metadata is quite fluid, as for instance self describing standards naturally combine both aspects.
 
 Arguably how much metadata is needed is not a fundamentally different question from: how much data or how much precision is needed.
@@ -626,12 +626,7 @@ At the very least this experiment gave us a way to reflect on the price point at
 This is clearly very preliminary work, but at least it provides the outline of an approach to develop value metrics for data.
 
 
-
-
-...
-
 ## Acknowledgements
-
-...
+We acknowledge Andrea Zaliani and "Harry Hacker" for providing comments to previous iterations of this work.
 
 ## References
