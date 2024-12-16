@@ -82,10 +82,12 @@ Economic impact models are more suited to policy decisions, as they don’t easi
 
 ## Data evaluation strategy
 In devising an approach for data evaluation, we consider the following steps:
+
 - A qualification of the context in which a dataset is used
 - Dimensions that contribute to the value of data
 - What is measurable about such dimensions
 - How these can be combined into metrics
+  
 The intention of this document is not to define finalized and applicable metrics, but to provide an approach to devise some, and to provide a “thought experiment” validation that the approach makes sense.
 
 # The context (purpose) of data use
@@ -96,56 +98,74 @@ Can we then identify some “typical and relative” patterns for such questions
 
 ## Aspects characterizing the business need
 One way to characterise a "data question" is based on its relation to its intended usage in a business, by considering:
+
 ### Breadth
 Whether the use of data is specific to a given question, or just explorative.
+
   - **Specific**. Data is intended to be used to answer one specific question.
   - **Thematic**. Data is intended to be used to answer a range of related questions.
   - **Explorative**. Data is not intended to answer a specific question, but rather availble for exploration.
+  - 
 ### Question life cycle
 Where a question is in its life cycle:
   - **Initiating**. The question the data is called to answer is in the its initial phases, vs delivering value.
+  - 
   - **Mature**. The question the data is called to answer is routinely delivering value.
   - **Phase-out**. The question the data is called to answer is being phased out.
 
 ## Aspects characterizing the usage of data to address a business need
 Another way to characterise data is how it relates to the business question.
+
 ### Competitiveness
 Whether the data is providing a competitive advantage in answering a qustion (with the implication that there is value in data that others don’t have access to).
+
   - **Competitive**: Data is contributing value by providing information that others don’t have (sub-case: having it earlier than others). Example: latest news.
   - **Non-competitive**: There is no particualar value in data being exclusive to a user. 
   - **Synergistic**:  Data is providing value by being shared with others. Example: reference data, where the more this is shared, the more data integration costs are minimized.
+    
 ### Recurrence
 The relation between purpose and time.
 Another possible category is the “life-span”. Is the task a once-only task, or a repeated task?
+
 - **One-off**. The utility of the data is for a specific question, after which data need would need to be re-evaluated
 - **Repeated**. The question this data is called to answer is recurrent. We could further distinguish whether in this case information is time-sensitive or not (e.g.: whether queries are about information in real time or not).
+- 
 ### Restrictivness
 Whether data usage is in a confidential context and is restricted in the way it can be applied to answer questions, or not (e.g.: some data may be tied to a question due to consent restriction, some data may not be linked to other data due to privacy restrictions)..
+
 - **Restricted**
 - **Public**
 
 ## Relations of a dataset to a purpose
 Another category is in what ways a dataset contributes to answer a business question.
+
 ### Relatedness
 How the dataset relates to a specific investigation. One way to think about this is to have a set of levels by which data assets can be ordered:
 Necessary and sufficient. This data asset is all that is needed to clearly address a purpose (e.g.: needs a list of addresses per postcodes in a country, this could be in a single data asset from the government)
+
 - **Necessary**. Without this asset a purpose could not be addressed, but the dataset may not be sufficient (e.g.: weather forecast is necessary for airplane traffic planning).
 - **Relevant**. There is some established potential for a dataset to address a purpose, but this is still only a conjecture.
 - **On topic**. There is no clear link between this dataset and a given task, except that the dataset is “on topic”. E.g.: for the objective of computing food calories, the dataset is about regional food recipes.
-**Unrelated**. The dataset is in principle unrelated to the task at hand (e.g.: a food recipe dataset for weather forecast)
+- **Unrelated**. The dataset is in principle unrelated to the task at hand (e.g.: a food recipe dataset for weather forecast)
+  
 ### Generation
 Whether the dataset is generated for a specific task, or if it is “re-used”.
+
 - **Primary whether**. the dataset is generated on purpose for a given topic
 - **Secondary**. whether a dataset, generated for another use case, can be repurposed
 - **A-priori**. whether a dataset is provided independently from use cases.
+- 
 ### Role
+
 - **Generic input**. The dataset is intended to provide information that directly or indirectly answer the question.
 - **Training**. The dataset is intended to be used for training.
 - **Test**. The dataset is intended to be used for testing.
 - **Validation**. The dataset is intended to be used for validation.
+  
 ## Data Life cycle
 Where data stands its generation life cycle. Any assessment or qualification of a data in its value needs to be related to the project stage when it has been produced and its generation and role.
 Usually any project as three stages:  
+
 - **Initiation**
 - **Maturity**
 - **Phase-out / legacy support**
@@ -153,6 +173,7 @@ Usually any project as three stages:
 
 ## Definition of characteristic contexts
 We have defined several aspects to characterize a data usage context, or question, here reported for readability:
+
 - The breadth of the question (Specific, Thematic, Explorative)
 - The relation of the dataset to a given question:
 -- The competitive advantage of a dataset (Competitive, non-competitive, Synergistic)
@@ -248,15 +269,19 @@ And from combining these two tables we can derive a set of contexts:
 
 ## Novelty/delta respect to other sources 
 Not an absolute measure, but any additional piece of knowledge will be more valuable as it adds new information to what is already known. Note that in some cases extra data may only be noise.
+
 ### “real-time”-ness
 Whether the information (time dependent) is relative to the “current” time. For instance, data feeds monitoring real-world entities (e.g.: weather, traffic, stock-market) have an intrinsic value the more this information is real-time and not delayed. This can be seen as a delta respect to knowledge that becomes more widely available in time.
+
 ### uniqueness
 Is this the only source for this information? Or are multiple sources available? This can be seen as a delta respect to other agents.
 
 ## Quality  
 The value of data is clearly related to its quality, as in:
+
 ### truth  
 Where data is true or accurate. Traceability may be part of this. “Truth” is in principle hard to establish, as what we can measure is really consistency (e.g.: respect to experimental evidence).
+
 ### “completeness”
 Whether data lacks missing values. Is there a reference?
 
@@ -264,16 +289,20 @@ Note: several aspects of quality could probably be quantified numerically (e.g.:
 
 ## Usability
 Data will be more valuable the more “usable” it is. Usability can have different sub-aspects.
+
 ### Standardization
 The more the data is represented following standards, the more it is easier (or at all possible) to integrate.
+
 ### Interrelation
 The more data has link to other data, the more it is easier (or at all possible) to integrate and contextualise it.
 
 ## Amount
 The value of a data asset may be in some way proportional to how much information is there:
+
 ## extensiveness
 In terms of coverage of a domain. If we are considering for instance a dataset about publications relevant for a specific domain, extensiveness could be captured by the amount of publications in the dataset, respect to the estimate of the total amount of publications available on the subject. 
 It should be feasible to have a normalised value (e.g.: in [0,1]) for this measure.
+
 ## detail
 In terms of depth of detail. We can capture, for a dataset, the average of how many distinct structured data items this presents. But it’s a discretionary value as the granularity of a data element is undefined. Plus it cannot be easily normalised (as detail itself is a recursive concept).
 
@@ -287,6 +316,7 @@ Cf. https://www.ontotext.com/knowledgehub/fundamentals/dikw-pyramid/
 
 ## Sustainability
 Whether we know that a dataset is going to be kept up to date or not.
+
 ### Curation model
 Who is in charge of the data cleansing? Is it the provider (source), the consumer or a third party? Is there a model where curation is shared among users in a pre-competitive space? (possibly maximizing value).
 
@@ -301,12 +331,14 @@ Novelty
 
 
 ## Novelty
+
 | | Theoretical measures | Practical measures | Measure type | Notes |
 |----------------------|----------------------|--------------------|--------------|-------|
 | “Real-time”-ness | % of new information respect the whole body | - For each dataset, delta vs previous versions - Same domain? Same originator? |Numeric normalised.|
 | Uniqueness | Inverse of the number of sources that present the same information. Maybe this is non-linear (the difference between an information being shared between 2 or 3 resources is more than between 10 or 11) | Yes/No? | ?| Can we really assess this? It would imply that all information is reconciled. |
 
 ## Quality
+
 | | Theoretical measures | Practical measures | Measure type | Notes |
 |----------------------|----------------------|--------------------|--------------|-------|
 | Truth | Almost impossible! | - Sampling/error rate - % of information with provenance -Amount of citations/derivations | % of information with provenance ||
@@ -314,18 +346,21 @@ Novelty
 
 
 ## Usability
+
 | |Theoretical measures | Practical measures | Measure type | Notes |
 |----------------------|----------------------|--------------------|--------------|-------|
 | Standardization | ? | Percentage of values from ontologies shared by one or more of other independent resources | Could be a normalised numeric, although perfection would not be 1 (you cannot be standard for information for which standards have yet to be defined) |
 | Interrelation | ? | Percentage of identifiers linked to one of more independent resources | Could be a normalised numeric, although perfection would not be 1(not everything can be linked) |
 
 ## Extensiveness
+
 | |Theoretical measures | Practical measures | Measure type | Notes |
 |----------------------|----------------------|--------------------|--------------|-------|
 | Amount | This could be an absolute measure, or relative (e.g.: respect to a number of entities in the world) | - Number of statements - Percentage of entities covered - Total amount of entities covered | Absolute, or normalised. | Nonlinear correction needed: arguably not all facts have the same weight and there is tradeoff between quantity and complexity of obtaining information |
 | Detail | ? | Average number of statement per entity | Absolute? |Nonlinear correction needed|
 
 ## Maintenance
+
 || Theoretical measures | Practical measures | Measure type | Notes |
 |----------------------|----------------------|--------------------|--------------|-------|
 | We can define some curation categories: curation once, continuous curation. Maybe for these the amount of “coverage” in terms of entities. An alternative approach would be to think in terms of MM/data. Maybe each curation-model has its own metrics. |-  Presence of evidence codes? - N. of tickets opened/closed - N. of messages on mailing lists? | ? ||
@@ -361,6 +396,7 @@ Elements on the diagonal are excluded from a trade-off questions, and we indicat
 For the sake of simplicity, we can aggregate dimensions at the higher level, as follow:
 
 Would I trade x for y?
+
 ||Novelty|Quality|Usability|Amount|Maintenance|Score|
 |-----|-----|-----|-----|-----|-----|-----|
 |Novelty||No|||||
@@ -386,6 +422,7 @@ We can follow this approach to prioritize aspects for each contexts.
 
 
 #### Ranking
+
 1. Quality/Maintenance
 2. Amount
 3. Novelty
@@ -402,6 +439,7 @@ We can follow this approach to prioritize aspects for each contexts.
 |Maintenance|Yes|!|No|?||0|
 
 ### Ranking
+
 1. Novelty
 2. Amount/Maintenance
 3. Quality/Usability
@@ -418,6 +456,7 @@ We can follow this approach to prioritize aspects for each contexts.
 |Maintenance|No|!|Yes|?||0|
 
 ### Ranking
+
 1. Quality
 2. Usability/Amount
 3. Maintenance
@@ -434,6 +473,7 @@ We can follow this approach to prioritize aspects for each contexts.
 |Maintenance|Yes|!|Yes|No||-1|
 
 ### Ranking
+
 1. Quality, Usability
 2. Amount
 3. Novelty, maintenance
@@ -450,6 +490,7 @@ We can follow this approach to prioritize aspects for each contexts.
 
 
 ### Ranking
+
 1. Novelty
 2. Usability
 3. Amount, Maintenance
@@ -466,6 +507,7 @@ We can follow this approach to prioritize aspects for each contexts.
 |Maintenance|No|!|?|?||1|
 
 ### Ranking
+
 1. Usability
 2. Amount, maintenance
 3. Quality
@@ -477,6 +519,7 @@ As a (rather extreme) thought experiment, we can consider a data evaluation prob
 The problem that we are considering is the evaluation of data curation strategies: given three different scenarios, what curation strategy leads to the highest value of data per moeny invested? We focus on the relative value of curation strategies in these scenarios as this provides a "measure" abstract enough that can compensate the noise deriving from all assumption we made, and still provide for some intuitive evaluation of results.
 
 ## Conditions
+
 - A dataset consists of annotations of 10k genes (out of a total of 30k), in free text.
 - We consider an investment of a nominal value of 100.
 - An automatic process to standardize data to ontologies costs 0.01 x gene, with an error rate of 10%.
@@ -486,11 +529,13 @@ The problem that we are considering is the evaluation of data curation strategie
 We want to evaluate the gain in value of different strategies in different scenarios:
 
 ## Strategies
+
 - Automatic curation
 - Manual curation
 - Extra annotation
 
 ## Scenarios
+
 - Specific-annotation-tc
 - Specific-annotation-non-tc
 - Explorative-repeated
