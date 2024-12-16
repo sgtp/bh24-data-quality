@@ -105,11 +105,10 @@ Whether the use of data is specific to a given question, or just explorative.
   - **Specific**. Data is intended to be used to answer one specific question.
   - **Thematic**. Data is intended to be used to answer a range of related questions.
   - **Explorative**. Data is not intended to answer a specific question, but rather availble for exploration.
-  - 
+    
 ### Question life cycle
 Where a question is in its life cycle:
   - **Initiating**. The question the data is called to answer is in the its initial phases, vs delivering value.
-  - 
   - **Mature**. The question the data is called to answer is routinely delivering value.
   - **Phase-out**. The question the data is called to answer is being phased out.
 
@@ -129,7 +128,7 @@ Another possible category is the “life-span”. Is the task a once-only task, 
 
 - **One-off**. The utility of the data is for a specific question, after which data need would need to be re-evaluated
 - **Repeated**. The question this data is called to answer is recurrent. We could further distinguish whether in this case information is time-sensitive or not (e.g.: whether queries are about information in real time or not).
-- 
+  
 ### Restrictivness
 Whether data usage is in a confidential context and is restricted in the way it can be applied to answer questions, or not (e.g.: some data may be tied to a question due to consent restriction, some data may not be linked to other data due to privacy restrictions)..
 
@@ -154,7 +153,7 @@ Whether the dataset is generated for a specific task, or if it is “re-used”.
 - **Primary whether**. the dataset is generated on purpose for a given topic
 - **Secondary**. whether a dataset, generated for another use case, can be repurposed
 - **A-priori**. whether a dataset is provided independently from use cases.
-- 
+  
 ### Role
 
 - **Generic input**. The dataset is intended to provide information that directly or indirectly answer the question.
