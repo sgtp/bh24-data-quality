@@ -41,9 +41,10 @@ authors_short: 'Andrea Splendiani \emph{et al.}, on the value of data (#BioHackJ
 ---
 
 
-# Preface
+# Abstract
 
-This the version a collaborative paper "on the value of data", that resulted from the discussions at the BioHackathon in Fukushima, 2024.
+What is the value of a dataset? This is a key question for many data management decisions. It is a difficult question to answer, as "it depends", on the needs, the consumer, other data, and many other factors. This work aims at sketching an approach to evaluate data, that is based on trade-offs decisions between different aspects to data, respect to different usage scenarios.
+This work hs been developed as a "collaborative paper" (on the value of data, a collaborative experiment). The version here reported is what resulted from the discussions at the BioHackathon in Fukushima, 2024.
 The live version of this document can be found at [@citation:valueOfData].
 
 # Introduction
