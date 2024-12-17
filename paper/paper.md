@@ -377,18 +377,18 @@ Basically, for each context, we can fill a trade-off matrix as below:
 Trade-off matrix example:
 
 
-| |Novelty/time| Quality/truth| Quality/completeness| Usability/standardization| Usability/interrelation| Amount/extensivity| Amount/detail|Maintenance/curation model| Maintenance/freshness| Novelty/time|
+| |Novelty vs time| Quality vs truth| Quality vs completeness| Usability vs standardization| Usability vs interrelation| Amount vs extensivity| Amount vs detail|Maintenance vs curation model| Maintenance vs freshness| Novelty vs time|
 |------|------|------| ------| ------| ------| ------|------| ------| ------|-----|
-|Novelty/uniq|No question||||||||||
-|Quality/truth|trade?|No question||||||||||
-|Quality/completeness|trade?|trade?|No question||||||||
-|Usability/standardization|trade?|trade?|trade?|No question|||||||
-|Usability/interrelation|trade?|trade?|trade?|trade?|No question||||||
-|Amount/extensivity|trade?|trade?|trade?|trade?|trade?|No question|||||
-|Amount/detail|trade?|trade?|trade?|trade?|trade?|trade?|No question||||
-|Maintenance/curation model|trade?|trade?|trade?|trade?|trade?|trade?|trade?|No question|||
-|Maintenance/freshness|trade?|trade?|trade?|trade?|trade?|trade?|trade?|trade?|No question||
-|Novelty/time|trade?|trade?|trade?|trade?|trade?|trade?|trade?|trade?|trade?|trade?|No question|
+|Novelty vs uniq|No question||||||||||
+|Quality vs truth|trade?|No question||||||||||
+|Quality vs completeness|trade?|trade?|No question||||||||
+|Usability vs standardization|trade?|trade?|trade?|No question|||||||
+|Usability vs interrelation|trade?|trade?|trade?|trade?|No question||||||
+|Amount vs extensivity|trade?|trade?|trade?|trade?|trade?|No question|||||
+|Amount vs detail|trade?|trade?|trade?|trade?|trade?|trade?|No question||||
+|Maintenance vs curation model|trade?|trade?|trade?|trade?|trade?|trade?|trade?|No question|||
+|Maintenance vs freshness|trade?|trade?|trade?|trade?|trade?|trade?|trade?|trade?|No question||
+|Novelty vs time|trade?|trade?|trade?|trade?|trade?|trade?|trade?|trade?|trade?|trade?|No question|
 
 Elements on the diagonal are excluded from a trade-off questions, and we indicate a trade question only for part of the matrix as answers are symmetric.
 
